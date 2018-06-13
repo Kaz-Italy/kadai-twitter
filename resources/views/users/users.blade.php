@@ -11,12 +11,24 @@
             </div>
             <div>
                 <p>{!! link_to_route('users.show', 'View profile', ['id' => $user->id]) !!}</p>
+            </div>    
+
+            <?php
+            $user_following_conf =  \Auth::user();
+            $key = $user_following_conf->is_following($user->id);
+            ?>
+
+            @if ($key)
+            <div>
+             フォロー中
             </div>
+            @endif
+            
         </div>
     </li>
 
 <! - Omission ->
 @endforeach
 </ul>
-{!! $ users->render() !!}
+{!! $users->render() !!}
 @endif

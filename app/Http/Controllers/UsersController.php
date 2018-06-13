@@ -106,6 +106,8 @@ class UsersController extends Controller
         $user = User::find($id);
         $followings = $user->followings()->paginate(10);
 
+
+        
         $data = [
             'user' => $user,
             'users' => $followings,
