@@ -13,6 +13,9 @@ class Micropost extends Model
         return $this->belongsTo(User::class);
     }
     
+    //返信機能
+    
+    
     
 }
 
