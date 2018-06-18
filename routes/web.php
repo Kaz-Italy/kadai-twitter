@@ -53,5 +53,7 @@ Route::get('/', 'MicropostsController@index');
         
     });
 
-    Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
+    Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy', 'update']]);
+    
+    Route::post('reply/{id}', 'MicropostsController@reply')->name('microposts.reply');
 });

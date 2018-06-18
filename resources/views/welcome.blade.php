@@ -7,7 +7,7 @@
             </aside>
             <div class="col-xs-8">
                 @if (count($microposts) > 0)
-                    @include('microposts.microposts', ['microposts' => $microposts])
+                    @include('microposts.microposts', ['microposts' => $microposts, 'micropost_childs' => $micropost_childs, 'user_childs' => $micropost_childs])
                 @endif
             </div>
         </div>

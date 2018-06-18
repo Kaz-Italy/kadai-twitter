@@ -17,6 +17,7 @@ class CreateMicropostsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->string('content');
+            $table->integer('response_id')->nullable();
             $table->timestamps();
             
             // Foreign key constraint
