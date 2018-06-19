@@ -115,14 +115,14 @@ public function feed_microposts()
         }
      }
 
-    public function undo_favorite($userId)
+    public function undo_favorite($postId)
     {
         // confirming if already favorite
         $exist = $this->is_favorite($postId);
 
         if ($exist) {
             // stop following if favorite
-            $this->favorite()->detach($postId);
+            $this->favorites()->detach($postId);
             return true;
         } else {
             // do nothing if not favorite

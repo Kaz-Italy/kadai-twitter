@@ -3,11 +3,7 @@
 @section('content')
     <div class="row">
         <!--<aside class="col-xs-4">-->
-          ポストID
-           <?php
-           print $micropost->id;
-           print $micropost->content;
-           ?>
+          
            
         <?php $user = $micropost->user; ?>
        <!-- <li class="media">-->
